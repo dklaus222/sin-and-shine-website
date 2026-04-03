@@ -430,104 +430,24 @@
       </div>
     </section>
 
- <section id="quote" class="fade">
+<section id="quote" class="fade">
   <h2>Request a Quote</h2>
-  <p>Tell us about your vehicle and what you’re looking for. We’ll respond with a tailored quote.</p>
+  <p>Choose how you'd like to get started.</p>
 
-  <form class="form" action="https://formspree.io/f/xwvwrqvj" method="POST">
+  <div class="ctaRow">
 
-    <input type="hidden" name="_subject" value="New Quote Request — Sin & Shine">
+    <!-- Jobber Booking -->
+    <a class="link" href="https://yourjobberlink.com" target="_blank" rel="noopener">
+      Book Instantly
+    </a>
 
-    <!-- Contact Info -->
-    <div>
-      <label>Full Name</label>
-      <input type="text" name="name" placeholder="Your name" required>
-    </div>
+    <!-- Opens Quote Form -->
+    <button class="btn secondary" type="button" onclick="openDialog('quoteDlg')">
+      Request Custom Quote
+    </button>
 
-    <div>
-      <label>Email</label>
-      <input type="email" name="email" placeholder="you@email.com" required>
-    </div>
-
-    <div>
-      <label>Phone Number</label>
-      <input type="tel" name="phone" placeholder="(___) ___-____" required>
-    </div>
-
-    <!-- Vehicle Info -->
-    <div>
-      <label>Vehicle Type</label>
-      <select name="vehicle_type" required>
-        <option value="">Select</option>
-        <option>Car</option>
-        <option>SUV</option>
-        <option>Truck</option>
-        <option>Motorcycle</option>
-      </select>
-    </div>
-
-    <div>
-      <label>Vehicle Make & Model</label>
-      <input type="text" name="vehicle" placeholder="Ex: BMW X5" required>
-    </div>
-
-    <div>
-      <label>Vehicle Condition</label>
-      <select name="condition" required>
-        <option value="">Select</option>
-        <option>Lightly used / well maintained</option>
-        <option>Moderate dirt / needs attention</option>
-        <option>Heavily soiled / deep clean needed</option>
-      </select>
-    </div>
-
-    <!-- Service Selection -->
-    <div>
-      <label>Service Interested In</label>
-      <select name="service" required>
-        <option value="">Select</option>
-        <option>Luxury Refresh</option>
-        <option>Signature Detail</option>
-        <option>Elite Finish</option>
-        <option>Ceramic Coating</option>
-        <option>Motorcycle Detail</option>
-        <option>Not sure (need recommendation)</option>
-      </select>
-    </div>
-
-    <!-- Add-ons -->
-    <div>
-      <label>Additional Services (optional)</label>
-      <div style="display:grid; gap:6px;">
-        <label><input type="checkbox" name="addons" value="Pet Hair Removal"> Pet Hair Removal</label>
-        <label><input type="checkbox" name="addons" value="Odor Removal"> Odor Removal</label>
-        <label><input type="checkbox" name="addons" value="Leather Conditioning"> Leather Conditioning</label>
-        <label><input type="checkbox" name="addons" value="Headlight Restoration"> Headlight Restoration</label>
-      </div>
-    </div>
-
-    <!-- Expectations -->
-    <div>
-      <label>What are you looking to improve?</label>
-      <textarea name="goals" placeholder="Tell us what you want done or any concerns..."></textarea>
-    </div>
-
-    <div>
-      <label>Preferred Date</label>
-      <input type="date" name="date">
-    </div>
-
-    <div>
-      <label>Location (City / Area)</label>
-      <input type="text" name="location" placeholder="Tampa, St Pete, etc." required>
-    </div>
-
-    <!-- Submit -->
-    <button class="submit" type="submit">Request Quote</button>
-
-  </form>
+  </div>
 </section>
-
 
   <footer class="fade">
     <div>Women-Owned · Luxury Mobile Detailing · Tampa, Florida</div>
@@ -570,6 +490,88 @@
     <p class="note" style="opacity:0.85;">
       — Deidre Klaus, Founder & CEO
     </p>
+
+  </div>
+</dialog>
+
+    <dialog id="quoteDlg">
+  <div class="modalTop">
+    <strong>REQUEST A CUSTOM QUOTE</strong>
+    <button class="close" onclick="closeDialog('quoteDlg')">Close</button>
+  </div>
+
+  <div class="modalBody">
+
+    <p class="note" style="text-align:center;">
+      Tell us about your vehicle and what you're looking for. We'll respond with a tailored quote.
+    </p>
+
+    <form class="form" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+
+      <input type="hidden" name="_subject" value="New Quote Request — Sin & Shine">
+
+      <!-- Contact -->
+      <div>
+        <label>Full Name</label>
+        <input type="text" name="name" required>
+      </div>
+
+      <div>
+        <label>Email</label>
+        <input type="email" name="email" required>
+      </div>
+
+      <div>
+        <label>Phone</label>
+        <input type="tel" name="phone" required>
+      </div>
+
+      <!-- Vehicle -->
+      <div>
+        <label>Vehicle Type</label>
+        <select name="vehicle_type" required>
+          <option value="">Select</option>
+          <option>Car</option>
+          <option>SUV</option>
+          <option>Truck</option>
+          <option>Motorcycle</option>
+        </select>
+      </div>
+
+      <div>
+        <label>Make & Model</label>
+        <input type="text" name="vehicle">
+      </div>
+
+      <div>
+        <label>Condition</label>
+        <select name="condition">
+          <option>Light</option>
+          <option>Moderate</option>
+          <option>Heavy</option>
+        </select>
+      </div>
+
+      <!-- Service -->
+      <div>
+        <label>Service Interested In</label>
+        <select name="service">
+          <option>Luxury Refresh</option>
+          <option>Signature Detail</option>
+          <option>Ceramic Coating</option>
+          <option>Not sure</option>
+        </select>
+      </div>
+
+      <!-- Notes -->
+      <div>
+        <label>Details / Requests</label>
+        <textarea name="details"></textarea>
+      </div>
+
+      <button class="submit" type="submit">Submit Request</button>
+
+    </form>
 
   </div>
 </dialog>
@@ -1287,7 +1289,7 @@
     </form>
 
     <p class="note" style="margin-top:12px; opacity:0.78;">
-      Submissions open on every Friday the 13th throughout the year.
+      Submissions open 30 days Prior to every Friday the 13th throughout the year.
     </p>
 
   </div>
