@@ -1083,38 +1083,127 @@
   </dialog>
 
   <dialog id="artDlg">
-    <div class="modalTop"><strong>FLAWS &amp; SIN ART CONTEST</strong><button class="close" onclick="closeDialog('artDlg')">Close</button></div>
-    <div class="modalBody">
-      <p class="note">Each month, Sin &amp; Shine invites local artists to submit original artwork inspired by luxury, rebellion, femininity, vehicles, or the duality of <em>sin &amp; shine</em>. One selected artist will be featured on a limited-edition t-shirt sold on our website — credited, promoted, and compensated.</p>
+  <div class="modalTop">
+    <strong>FLAWS & SIN ART CONTEST</strong>
+    <button class="close" onclick="closeDialog('artDlg')">Close</button>
+  </div>
 
-      <form class="form" onsubmit="event.preventDefault(); alert('Submitted! (We’ll connect this to your email soon.)');">
-        <div>
-          <label>Name</label>
-          <input type="text" placeholder="Your name" required />
-        </div>
-        <div>
-          <label>Email</label>
-          <input type="email" placeholder="you@email.com" required />
-        </div>
-        <div>
-          <label>Portfolio Link</label>
-          <input type="url" placeholder="https://..." required />
-        </div>
-        <div>
-          <label>Artwork Link</label>
-          <input type="url" placeholder="https://..." required />
-        </div>
-        <div>
-          <label>Artist Notes</label>
-          <textarea placeholder="Tell us the vibe + meaning + any notes..."></textarea>
-        </div>
-        <button class="submit" type="submit">Submit Artwork</button>
-      </form>
+  <div class="modalBody">
 
-      <p class="note" style="margin-top:12px; opacity:0.78;">(This preview form works. When you create your email, we’ll wire it to send submissions.)</p>
-    </div>
-  </dialog>
+    <p class="note">
+      At <b>Sin & Shine</b>, we don’t celebrate perfection — we celebrate what’s raw, overlooked, and real.
+    </p>
 
+    <p class="note">
+      A few times a year, when the calendar aligns with <b>Friday the 13th</b>, we open submissions for our <b>Flaws & Sin Art Contest</b> — a curated drop featuring artists who understand the balance between edge and refinement.
+    </p>
+
+    <p class="note">
+      This contest was built around the day Sin & Shine was created — January 13th — and carries that same energy: intentional, a little rebellious, and impossible to ignore.
+    </p>
+
+    <p class="note">
+      Artists are invited to submit <b>original artwork inspired by the Sin & Shine brand</b> — not just a logo, but the full identity. Duality, luxury, imperfection, femininity, edge, and transformation — whatever <b>sin & shine</b> means through your lens.
+    </p>
+
+    <p class="note">
+      We’re not looking for copies.<br>
+      We’re looking for interpretation.
+    </p>
+
+    <p class="note">
+      <b>Grand Prize:</b><br>
+      The selected artist will have their design turned into a <b>limited-edition release</b>, featured across our brand, and professionally produced.
+    </p>
+
+    <p class="note">
+      You’ll receive:<br>
+      – Full credit across Sin & Shine platforms<br>
+      – Compensation for your artwork<br>
+      – A featured drop tied to a Friday the 13th release
+    </p>
+
+    <p class="note">
+      This isn’t mass production.<br>
+      This is a statement piece.
+    </p>
+
+    <p class="note" style="font-weight:600; text-align:center;">
+      Created on the 13th. Released on the 13th.
+    </p>
+
+    <p class="note">
+      If your work stands out, we’ll make sure it’s seen.
+    </p>
+
+    <hr style="border:0; height:1px; background: rgba(191,168,255,0.18); margin:18px 0;" />
+
+    <hr style="border:0; height:1px; background: rgba(191,168,255,0.18); margin:18px 0;" />
+
+<section style="margin-top:0; padding:0; border:none; background:none;">
+  <h2 style="text-align:center;">Submission Guidelines & Rules</h2>
+
+  <p class="note">
+    To qualify for the Flaws & Sin Art Contest, all submissions must follow the guidelines below:
+  </p>
+
+  <div class="note" style="margin-top:10px;">
+    – Artwork must be original and created by the submitting artist<br>
+    – Designs must be inspired by the Sin & Shine brand identity (not copied logos)<br>
+    – Submissions should reflect themes such as duality, luxury, imperfection, femininity, edge, or transformation<br>
+    – Artwork must be suitable for apparel or print production<br>
+    – No copyrighted or trademarked material may be used
+  </div>
+
+  <h2 style="text-align:center; margin-top:18px;">How to Qualify</h2>
+
+  <div class="note" style="margin-top:10px;">
+    – Submit a portfolio link and original artwork concept<br>
+    – Include a short explanation of your design and its meaning<br>
+    – Be available for communication if selected
+  </div>
+
+  <h2 style="text-align:center; margin-top:18px;">Submission Timeline</h2>
+
+  <div class="note" style="margin-top:10px;">
+    Submissions open <b>30 days prior</b> to each Friday the 13th.<br>
+    All entries must be submitted <b>no later than 7 days before</b> the release date.<br><br>
+    The selected artist will be announced on <b>Friday the 13th</b>, alongside the official release.
+  </div>
+
+</section>
+
+    <form class="form" onsubmit="event.preventDefault(); alert('Submitted! (We’ll connect this to your email soon.)');">
+      <div>
+        <label>Name</label>
+        <input type="text" placeholder="Your name" required />
+      </div>
+      <div>
+        <label>Email</label>
+        <input type="email" placeholder="you@email.com" required />
+      </div>
+      <div>
+        <label>Portfolio Link</label>
+        <input type="url" placeholder="https://..." required />
+      </div>
+      <div>
+        <label>Artwork Link</label>
+        <input type="url" placeholder="https://..." required />
+      </div>
+      <div>
+        <label>Artist Notes</label>
+        <textarea placeholder="Tell us the concept, inspiration, and meaning behind your work..."></textarea>
+      </div>
+      <button class="submit" type="submit">Submit Artwork</button>
+    </form>
+
+    <p class="note" style="margin-top:12px; opacity:0.78;">
+      Submissions open on every Friday the 13th throughout the year.
+    </p>
+
+  </div>
+</dialog>
+  
   <script>
     // Fade-in on scroll (preview-safe)
     (function initFade(){
