@@ -493,9 +493,17 @@
   </div>
 </dialog>
 
-    <section id="quote" class="fade">
-  <h2>Request a Custom Quote </h2>
-  <p>Tell us about your vehicle and what you’re looking for. We’ll respond with a tailored quote.</p>
+    <dialog id="quoteDlg">
+  <div class="modalTop">
+    <strong>REQUEST A CUSTOM QUOTE</strong>
+    <button class="close" onclick="closeDialog('quoteDlg')">Close</button>
+  </div>
+
+  <div class="modalBody">
+
+    <p class="note" style="text-align:center;">
+      Tell us about your vehicle and what you're looking for. We'll send you a custom quote.
+    </p>
 
   <form class="form" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
 
