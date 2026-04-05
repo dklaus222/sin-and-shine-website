@@ -442,10 +442,9 @@
     </a>
 
     <!-- Opens Quote Form -->
-    <button class="btn secondary" type="button" onclick="openDialog('quoteDlg')">
-      Request Custom Quote
-    </button>
-
+    <button class="btn secondary" onclick="openDialog('quoteDlg')">
+  Request Custom Quote
+</button>
   </div>
 </section>
 
@@ -490,6 +489,69 @@
     <p class="note" style="opacity:0.85;">
       — Deidre Klaus, Founder & CEO
     </p>
+
+  </div>
+</dialog>
+
+    <dialog id="quoteDlg">
+  <div class="modalTop">
+    <strong>REQUEST A CUSTOM QUOTE</strong>
+    <button class="close" onclick="closeDialog('quoteDlg')">Close</button>
+  </div>
+
+  <div class="modalBody">
+
+    <p class="note" style="text-align:center;">
+      Tell us about your vehicle and what you're looking for. We'll send you a custom quote.
+    </p>
+
+    <form class="form" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+
+      <input type="hidden" name="_subject" value="New Quote Request — Sin & Shine">
+
+      <div>
+        <label>Name</label>
+        <input type="text" name="name" required>
+      </div>
+
+      <div>
+        <label>Email</label>
+        <input type="email" name="email" required>
+      </div>
+
+      <div>
+        <label>Phone</label>
+        <input type="tel" name="phone">
+      </div>
+
+      <div>
+        <label>Vehicle Type</label>
+        <select name="vehicle_type">
+          <option>Car</option>
+          <option>SUV</option>
+          <option>Truck</option>
+          <option>Motorcycle</option>
+        </select>
+      </div>
+
+      <div>
+        <label>Service Needed</label>
+        <select name="service">
+          <option>Luxury Refresh</option>
+          <option>Signature Detail</option>
+          <option>Ceramic Coating</option>
+          <option>Not sure</option>
+        </select>
+      </div>
+
+      <div>
+        <label>Details</label>
+        <textarea name="details" placeholder="Tell us what you need..."></textarea>
+      </div>
+
+      <button class="submit" type="submit">Submit Quote Request</button>
+
+    </form>
 
   </div>
 </dialog>
